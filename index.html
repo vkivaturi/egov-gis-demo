@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eGove GIS demo</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <script type="module" src="/geoMain.js"></script>
+    <script src="data/test_geojson.js" type="text/javascript"></script>
+
+
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+      }
+      .leaflet-container {
+        height: 800px;
+        width: 1200px;
+        max-width: 100%;
+        max-height: 100%;
+      }
+    </style>
+  
+  </head>
+  <body>
+    <div id="map"></div>
+    <div>
+      <input type="checkbox" id="drains" checked> Drains layer
+      <input type="checkbox" id="streams" checked> Streams layer
+      <input type="checkbox" id="sheds" checked> Water sheds layer
+      <input type="checkbox" id="tests" checked> Testing locations layer
+      <input type="checkbox" id="satellite" checked> Satellite base view
+    </div>
+  </body>
+</html>
